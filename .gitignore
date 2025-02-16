@@ -1,0 +1,4 @@
+*.bz2
+*.pkl
+*csv
+*__pycache__*
