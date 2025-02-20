@@ -7,7 +7,8 @@ import bz2
 DATASET_URL = "https://downloads.tatoeba.org/exports/sentences.tar.bz2"
 DATASET_BZ2_FILE = "sentences.tar.bz2"
 DATASET_TSV_FILE = "sentences.csv"
-LANGUAGES = {"eng": "English", "fra": "French", "spa": "Spanish", "deu": "German", "ita": "Italian"}
+LANGUAGES = {"eng": "English", "fra": "French", "spa": "Spanish", "deu": "German", "ita": "Italian",
+            "rus": "Russian", "ind": "Indian", "ara": "Arabic", "kor": "Korean", "cmn": "Chinese"}
 
 def download_dataset():
     """Downloads the dataset if it does not exist."""
@@ -26,7 +27,7 @@ def extract_dataset():
             out_file.write(file.read())
         print("Extraction complete.")
 
-def load_dataset(sample_size=5000):
+def load_dataset(sample_size=10000):
     """Loads and processes the dataset after ensuring it's available."""
     download_dataset()
     extract_dataset()
